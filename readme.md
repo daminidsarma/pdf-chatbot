@@ -84,5 +84,3 @@ Support for multiple file formats (.docx, .txt)
 Add conversation history memory
 
 Deploy on cloud (Streamlit Cloud / HuggingFace Spaces)
-
-👩‍💻 Author
