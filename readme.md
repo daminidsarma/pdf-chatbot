@@ -1,37 +1,88 @@
-# Langchain Ask PDF (Tutorial)
+A self project that enables users to chat with PDF documents using LangChain, OpenAI, and Streamlit. Upload any PDF and ask natural language questions to get instant answers powered by embeddings and vector search.
 
->You may find the step-by-step video tutorial to build this application [on Youtube](https://youtu.be/wUAUdEw5oxM).
+🚀 Features
 
-This is a Python application that allows you to load a PDF and ask questions about it using natural language. The application uses a LLM to generate a response about your PDF. The LLM will not answer questions unrelated to the document.
+🔍 Extracts and processes text from PDFs
 
-## How it works
+🧩 Splits text into chunks for better retrieval
 
-The application reads the PDF and splits the text into smaller chunks that can be then fed into a LLM. It uses OpenAI embeddings to create vector representations of the chunks. The application then finds the chunks that are semantically similar to the question that the user asked and feeds those chunks to the LLM to generate a response.
+🤖 Uses LangChain with OpenAI embeddings for semantic search
 
-The application uses Streamlit to create the GUI and Langchain to deal with the LLM.
+💬 Interactive chat-style interface built with Streamlit
+
+📊 Handles multi-page PDFs efficiently
+
+📂 Project Structure
+langchain-ask-pdf/
+│── app.py                  # Main Streamlit app
+│── requirements.txt        # Dependencies
+│── .env                    # API key configuration
+│── India.pdf               # Sample input PDF
+│── India_States.docx       # Sample output (processed text)
+│── GUI.png                 # Screenshot of the interface
+│── README.md               # Project documentation
+
+⚙️ Installation & Setup
+
+Clone the repository
+
+git clone https://github.com/daminidsarma/pdf-chatbot-langchain.git
+cd pdf-chatbot-langchain
 
 
-## Installation
+Create and activate a virtual environment
 
-To install the repository, please clone this repository and install the requirements:
+python -m venv venv
+venv\Scripts\activate   # On Windows
+source venv/bin/activate   # On Mac/Linux
 
-```
+
+Install dependencies
+
 pip install -r requirements.txt
-```
 
-You will also need to add your OpenAI API key to the `.env` file.
 
-## Usage
+Set up environment variables
+Create a .env file and add your OpenAI API key:
 
-To use the application, run the `main.py` file with the streamlit CLI (after having installed streamlit): 
+OPENAI_API_KEY=your_api_key_here
 
-```
+
+Run the Streamlit app
+
 streamlit run app.py
-```
 
+🖼️ Screenshots
+Chat Interface
 
-## Contributing
+📊 Example Use Case
 
-This repository is for educational purposes only and is not intended to receive further contributions. It is supposed to be used as support material for the YouTube tutorial that shows how to build the project.
+Upload India.pdf
 
+Ask: “What is the capital of Rajasthan?”
 
+Get instant answer: Jaipur
+
+🛠️ Tech Stack
+
+Python
+
+LangChain
+
+OpenAI
+
+FAISS
+
+Streamlit
+
+PyPDF2
+
+🌟 Future Enhancements
+
+Support for multiple file formats (.docx, .txt)
+
+Add conversation history memory
+
+Deploy on cloud (Streamlit Cloud / HuggingFace Spaces)
+
+👩‍💻 Author
